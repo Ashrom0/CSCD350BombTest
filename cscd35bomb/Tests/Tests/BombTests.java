@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;
 import Tests.Bomb.*;
 
-class BombTest {
+class BombTests {
 
 	@Test
 	public void testWind() {
