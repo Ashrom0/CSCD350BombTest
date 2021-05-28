@@ -7,8 +7,17 @@ import Tests.Bomb.*;
 class BombTests {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testWind() {
+		
+	}
+	
+	@Test
+	public void testRelease() {
+		
 	}
 
+	@Test
+	public void testError () {
+		
+	}
 }
