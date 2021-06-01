@@ -1,18 +1,21 @@
 package Tests;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.RepeatedTest;
 import org.testng.annotations.Test;
 //import Tests.Tests.Bomb.*;
 
 //import org.junit.jupiter.api.*;
 
-class BombTest {
+public class BombTest {
 
-	@Test
+	@RepeatedTest(10)
 	public void testWind() {
 		Bomb bomb = new Bomb(0,0,0,0,null,0,45.0,10.0);
-		assertEquals(45.0, bomb.getWindDirection());
-		assertEquals(10.0, bomb.getWindSpeed());
+		Assertions.assertEquals(45.0, bomb.getWindDirection());
+		Assertions.assertEquals(10.0, bomb.getWindSpeed());
 	}
 	
 	@Test
