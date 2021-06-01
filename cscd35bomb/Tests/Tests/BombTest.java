@@ -7,8 +7,6 @@ import org.junit.jupiter.api.RepeatedTest;
 import org.testng.annotations.Test;
 //import Tests.Tests.Bomb.*;
 
-//import org.junit.jupiter.api.*;
-
 public class BombTest {
 
 	@RepeatedTest(10)
@@ -37,5 +35,14 @@ public class BombTest {
 		Bomb bomb1 = new Bomb(0, 0, 0, 0, Bomb.E_ErrorType.NONE, 10, 0, 0);
 		Bomb bomb2 = new Bomb(0, 0, 0, 0, Bomb.E_ErrorType.UNIFORM, 10, 0, 0);
 		Bomb bomb3 = new Bomb(0, 0, 0, 0, Bomb.E_ErrorType.GAUSSIAN, 10, 0, 0);
+
+		assertEquals(bomb1.getErrorType(), Bomb.E_ErrorType.NONE);
+		assertEquals(bomb2.getErrorType(), Bomb.E_ErrorType.UNIFORM);
+		assertEquals(bomb1.getErrorType(), Bomb.E_ErrorType.GAUSSIAN);
+
+		assertEquals(bomb1.getErrorRange(), 10.0);
+		assertEquals(bomb2.getErrorRange(), 10.0);
+		assertEquals(bomb3.getErrorRange(), 10.0);
 	}
+
 }
